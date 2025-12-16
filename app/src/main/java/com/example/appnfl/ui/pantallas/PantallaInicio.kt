@@ -14,8 +14,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 
@@ -45,13 +43,4 @@ fun PantallaInicio(navController: NavHostController) {
             Text("Sobre la App") // Opcionalmente, usa un recurso de string: stringResource(R.string.sobre_la_app)
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PantallaInicioPreview() {
-    // Envuelve tu preview en un tema para que los componentes como Button tengan el estilo correcto.
-    PantallaInicio(
-        navController = NavHostController(LocalContext.current)
-    )
 }
