@@ -14,12 +14,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 @Composable
-fun PantallaInicio(navController: NavController.Companion) {
+fun PantallaInicio(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -51,6 +52,6 @@ fun PantallaInicio(navController: NavController.Companion) {
 fun PantallaInicioPreview() {
     // Envuelve tu preview en un tema para que los componentes como Button tengan el estilo correcto.
     PantallaInicio(
-        navController = NavController
+        navController = NavController(LocalContext.current)
     )
 }
