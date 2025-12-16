@@ -55,7 +55,7 @@ fun PantallaEquipos(navController: NavHostController){
                     modifier = Modifier
                         .padding(10.dp)
                         .fillMaxWidth()
-                        .clickable {}
+                        .clickable {navController.navigate("Detalle/${equipo.id}")}
                 ){
                     Row(
                         modifier = Modifier
