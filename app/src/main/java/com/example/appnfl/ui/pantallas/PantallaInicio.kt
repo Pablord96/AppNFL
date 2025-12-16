@@ -17,10 +17,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 
 @Composable
-fun PantallaInicio(navController: NavController) {
+fun PantallaInicio(navController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -35,13 +35,13 @@ fun PantallaInicio(navController: NavController) {
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Button(onClick = { }) {
+        Button(onClick = { navController.navigate("Equipos") }) {
             Text("Ver Equipo") // Opcionalmente, usa un recurso de string: stringResource(R.string.ver_equipo)
         }
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(onClick = { }) {
+        Button(onClick = { navController.navigate("Info") }) {
             Text("Sobre la App") // Opcionalmente, usa un recurso de string: stringResource(R.string.sobre_la_app)
         }
     }
@@ -52,6 +52,6 @@ fun PantallaInicio(navController: NavController) {
 fun PantallaInicioPreview() {
     // Envuelve tu preview en un tema para que los componentes como Button tengan el estilo correcto.
     PantallaInicio(
-        navController = NavController(LocalContext.current)
+        navController = NavHostController(LocalContext.current)
     )
 }

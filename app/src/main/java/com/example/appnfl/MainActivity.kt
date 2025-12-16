@@ -12,6 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.appnfl.ui.pantallas.PantallaEquipos
+import com.example.appnfl.ui.pantallas.PantallaInfo
 import com.example.appnfl.ui.pantallas.PantallaInicio
 import com.example.appnfl.ui.theme.AppNFLTheme
 
@@ -39,6 +41,12 @@ fun EquiposApp() {
     NavHost(navController = navController, startDestination = "Inicio") {
         composable("Inicio") {
             PantallaInicio(navController)
+        }
+        composable("Equipos") {
+            PantallaEquipos(navController)
+        }
+        composable("Info") {
+            PantallaInfo(navController)
         }
     }
 }
