@@ -30,7 +30,6 @@ fun PantallaInicio(navController: NavHostController) {
     ) {
         // --- INICIO DE LA IMAGEN ---
         Image(
-            // Cambia 'R.drawable.nfl_logo' por el nombre real de tu archivo en la carpeta drawable
             painter = painterResource(id = R.drawable.nfl),
             contentDescription = "Logo de la NFL",
             modifier = Modifier

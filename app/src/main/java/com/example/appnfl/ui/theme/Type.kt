@@ -6,29 +6,28 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-// Set of Material typography styles to start with
 val Typography = Typography(
+    // Estilo para texto normal
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
+    ),
+    // Estilo para Títulos (ej. "Bienvenido a la app...")
     titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
+        fontFamily = FontFamily.Default, // Si tienes una fuente "Slab" o "Block", úsala aquí
+        fontWeight = FontWeight.ExtraBold, // Muy negrita para impacto deportivo
+        fontSize = 28.sp,
+        lineHeight = 32.sp,
         letterSpacing = 0.sp
     ),
-    labelSmall = TextStyle(
+    // Estilo para Botones
+    labelLarge = TextStyle(
         fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp, // Botones más grandes
+        letterSpacing = 1.sp // Espaciado para legibilidad
     )
-    */
 )
